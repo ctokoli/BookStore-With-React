@@ -4,7 +4,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Math Magicians React App ](#-math-magicians-react-app-)
+- [📖 Bookstore React App ](#-bookstore-react-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
