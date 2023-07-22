@@ -85,7 +85,7 @@ https://github.com/ctokoli/Bookstore.git
 
 - Navigate to the location of the folder in your machine:
 
-**``you@your-Pc-name:~$ cd math-magicians-react-app``**
+**``you@your-Pc-name:~$ cd bookkstore-with-react``**
 
 ### Install
 
