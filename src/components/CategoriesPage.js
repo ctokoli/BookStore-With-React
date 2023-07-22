@@ -1,6 +1,6 @@
 const CategoriesPage = () => (
   <div>
-    <h2>Categories Page</h2>
+    <h3>Categories Page</h3>
   </div>
 );
 
