@@ -28,7 +28,7 @@ const Books = () => {
   return (
     <>
       <BookItems
-        booksProps={books}
+        bookProps={books}
       />
       <BookForm />
     </>
