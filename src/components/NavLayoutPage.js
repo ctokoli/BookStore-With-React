@@ -5,9 +5,7 @@ const NavLayout = () => (
     <nav>
       <ul>
         <li><Link to="/">Books</Link></li>
-        <li>
-          <Link to="/categories">Categories</Link>
-        </li>
+        <li><Link to="/categories">Categories</Link></li>
       </ul>
     </nav>
     <Outlet />
