@@ -5,7 +5,7 @@ const BooksItem = ({ bookItem }) => (
 
   <li>
     <h1>{bookItem.title}</h1>
-    <h4>{bookItem.author}</h4>
+    <h3>{bookItem.author}</h3>
     <button type="button">Delete</button>
   </li>
 );
