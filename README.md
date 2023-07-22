@@ -24,7 +24,7 @@
   - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
-# 📖 Math Magicians React App <a name="about-project"></a>
+# 📖 Bookstore React App <a name="about-project"></a>
 This is a React project were i create a single page Application using React JS. I create a Bookstore App .  
 
 
