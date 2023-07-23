@@ -56,6 +56,7 @@ This is a React project were i create a single page Application using React JS. 
 ### Key Features <a name="key-features"></a>
 
 - **Create Single Page App**
+- **Use Redux Toolkit**
 
 
 
