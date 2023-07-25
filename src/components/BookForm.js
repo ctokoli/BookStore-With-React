@@ -16,6 +16,8 @@ const BookForm = () => {
     const formValueWithid = { item_id: 'item4', ...formValue };
 
     dispatch(addBooks(formValueWithid));
+
+    setFormValue({ title: '', author: '', category: '' });
   };
 
   return (
