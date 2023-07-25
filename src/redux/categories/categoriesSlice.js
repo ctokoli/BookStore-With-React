@@ -5,6 +5,7 @@ const initialState = {
 };
 
 const catSlice = createSlice({
+  name: 'Categories',
   initialState,
   reducers: {
     catStatus(state = initialState) {
