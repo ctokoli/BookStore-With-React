@@ -13,7 +13,6 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formValue);
     const formValueWithid = { item_id: 'item4', ...formValue };
 
     dispatch(addBooks(formValueWithid));
