@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import BooksItem from './BookItem';
 
-const BookItems = ({ booksProps }) => (
+const BookItems = ({ bookProps }) => (
   <div className="bookItems">
     <ul>
-      {booksProps.map((book) => (
+      {bookProps.map((book) => (
         <BooksItem
           key={book.id}
           bookItem={book}
@@ -15,7 +15,7 @@ const BookItems = ({ booksProps }) => (
 );
 
 BookItems.propTypes = {
-  booksProps: PropTypes.array.isRequired,
+  bookProps: PropTypes.array.isRequired,
 };
 
 export default BookItems;

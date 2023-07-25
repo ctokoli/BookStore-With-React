@@ -4,7 +4,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Math Magicians React App ](#-math-magicians-react-app-)
+- [📖 Bookstore React App ](#-bookstore-react-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -24,7 +24,7 @@
   - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
-# 📖 Math Magicians React App <a name="about-project"></a>
+# 📖 Bookstore React App <a name="about-project"></a>
 This is a React project were i create a single page Application using React JS. I create a Bookstore App .  
 
 
@@ -56,6 +56,7 @@ This is a React project were i create a single page Application using React JS. 
 ### Key Features <a name="key-features"></a>
 
 - **Create Single Page App**
+- **Use Redux Toolkit**
 
 
 
@@ -85,7 +86,7 @@ https://github.com/ctokoli/Bookstore.git
 
 - Navigate to the location of the folder in your machine:
 
-**``you@your-Pc-name:~$ cd math-magicians-react-app``**
+**``you@your-Pc-name:~$ cd bookkstore-with-react``**
 
 ### Install
 
