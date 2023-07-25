@@ -131,7 +131,7 @@ You can deploy this project using: GitHub Pages,
 
 👤 **Cephas, Tokoli**
 
-- GitHub: [@Ctokoli](https://github.com/ctokoli)
+- GitHub: [@Ctokoli](https://github.com/ctokoli/)
 - Twitter: [@Ctokoli](https://twitter.com/ctokoli)
 - LinkedIn: [Cephas Tokoli](https://www.linkedin.com/in/cephas-tokoli-a25204123/)
 
