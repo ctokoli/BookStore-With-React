@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidV4 } from 'uuid';
-import { addBooks } from '../redux/books/booksSlice';
+import { postBooks } from '../redux/books/booksSlice';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -13,11 +13,15 @@ const BookForm = () => {
     setFormValue({ ...formValue, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const formValueWithid = { item_id: id, ...formValue };
-
-    dispatch(addBooks(formValueWithid));
+    try {
+      const formValueWithid = { item_id: id, ...formValue };
+      const response = await dispatch(postBooks(formValueWithid));
+      console.log(response);
+    } catch (error) {
+      console.log('Error', error);
+    }
 
     setFormValue({ title: '', author: '', category: '' });
   };
