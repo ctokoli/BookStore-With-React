@@ -11,7 +11,7 @@ const BooksList = ({ bookItem }) => {
     <li>
       <h1>{bookItem.title}</h1>
       <h3>{bookItem.author}</h3>
-      <button type="button" onClick={() => removeBook(bookItem.item_id)}>Delete</button>
+      <button type="button" onClick={() => removeBook(bookItem.id)}>Delete</button>
     </li>
   );
 };
