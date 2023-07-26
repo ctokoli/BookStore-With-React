@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidV4 } from 'uuid';
 import { addBooks } from '../redux/books/booksSlice';
 
 const BookForm = () => {
@@ -13,7 +14,7 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formValueWithid = { item_id: 'item4', ...formValue };
+    const formValueWithid = { item_id: uuidV4, ...formValue };
 
     dispatch(addBooks(formValueWithid));
 
