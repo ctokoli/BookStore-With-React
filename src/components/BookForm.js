@@ -6,6 +6,7 @@ import { addBooks } from '../redux/books/booksSlice';
 const BookForm = () => {
   const dispatch = useDispatch();
   const [formValue, setFormValue] = useState({ title: '', author: '', category: '' });
+  const id = uuidV4();
 
   const handleInput = (e) => {
     const { name, value } = e.target;
@@ -14,7 +15,7 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const formValueWithid = { item_id: uuidV4, ...formValue };
+    const formValueWithid = { item_id: id, ...formValue };
 
     dispatch(addBooks(formValueWithid));
 
@@ -39,7 +40,7 @@ const BookForm = () => {
       />
       <input
         type="input"
-        placeholder="Add Author"
+        placeholder="Add Category"
         value={formValue.category}
         name="category"
         onChange={handleInput}
