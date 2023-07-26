@@ -12,15 +12,9 @@ const Books = () => {
     dispatch(getBooks());
   }, [dispatch]);
 
-  const bookItems = Object.entries(books).map(([id, books]) => {
-    const [item] = books;
-    return { id, ...item };
-  });
-
   return (
-
     <>
-      {bookItems.map((book) => (
+      {books.map((book) => (
         <BooksItem
           key={book.id}
           bookProps={book}
