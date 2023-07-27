@@ -27,15 +27,7 @@ export const deleteBooks = createAsyncThunk('books/delete', async (id) => {
 const booksSlice = createSlice({
   name: 'Books',
   initialState,
-  reducers: {
-    addBooks(state, action) {
-      state.books.push(action.payload);
-    },
-
-    delBooks(state, action) {
-      state.books = state.books.filter((book) => book.id !== action.payload);
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getBooks.fulfilled, (state, action) => {
       state.status = 'success';
