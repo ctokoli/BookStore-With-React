@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { delBooks } from '../redux/books/booksSlice';
+import { deleteBooks } from '../redux/books/booksSlice';
 
 const BooksList = ({ bookItem }) => {
   const dispatch = useDispatch();
   const removeBook = (id) => {
-    dispatch(delBooks(id));
+    dispatch(deleteBooks(id));
   };
   return (
     <li>
