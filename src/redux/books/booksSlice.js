@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const getBooks = createAsyncThunk('books/get', async () => {
-  const response = await axios.get(`${process.env.REACT_APP_YOUR_GET_API_KEY}`);
+  const response = await axios.get(`${process.env.REACT_APP_GET_API_KEY}`);
   const bookItems = Object.entries(response.data).map(([id, books]) => {
     const [item] = books;
     return { id, ...item };
@@ -16,8 +16,23 @@ export const getBooks = createAsyncThunk('books/get', async () => {
 });
 
 export const postBooks = createAsyncThunk('books/post', async (requestData) => {
-  const response = await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/JGXq0GO4nfElkOqW7Wnq/books', requestData);
-  return response.data;
+  await axios.post(`${process.env.REACT_APP_POST_API_KEY}`, requestData);
+  const response = await axios.get(`${process.env.REACT_APP_GET_API_KEY}`);
+  const bookItems = Object.entries(response.data).map(([id, books]) => {
+    const [item] = books;
+    return { id, ...item };
+  });
+  return bookItems;
+});
+
+export const deleteBooks = createAsyncThunk('books/delete', async (id) => {
+  await axios.delete(`${process.env.REACT_APP_POST_API_KEY}/${id}`);
+  const response = await axios.get(`${process.env.REACT_APP_DELETE_API_KEY}`);
+  const bookItems = Object.entries(response.data).map(([id, books]) => {
+    const [item] = books;
+    return { id, ...item };
+  });
+  return bookItems;
 });
 
 const booksSlice = createSlice({
@@ -34,15 +49,25 @@ const booksSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(getBooks.fulfilled, (state, action) => {
-      state.status = 'succeeded';
+      state.status = 'success';
       state.books = action.payload;
     });
 
-    builder.addCase(postBooks.fulfilled, (state) => {
-      state.status = 'succeeded';
+    builder.addCase(postBooks.fulfilled, (state, action) => {
+      state.status = 'success';
+      state.books = action.payload;
     });
 
     builder.addCase(postBooks.rejected, (state) => {
+      state.status = 'failed';
+    });
+
+    builder.addCase(deleteBooks.fulfilled, (state, action) => {
+      state.status = 'success';
+      state.books = action.payload;
+    });
+
+    builder.addCase(deleteBooks.rejected, (state) => {
       state.status = 'failed';
     });
   },
