@@ -15,14 +15,8 @@ const BookForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const formValueWithid = { item_id: id, ...formValue };
-      const response = await dispatch(postBooks(formValueWithid));
-      console.log(response);
-    } catch (error) {
-      console.log('Error', error);
-    }
-
+    const formValueWithid = { item_id: id, ...formValue };
+    dispatch(postBooks(formValueWithid));
     setFormValue({ title: '', author: '', category: '' });
   };
 
