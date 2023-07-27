@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import fetchData from '../../Utils/fetchData';
 
 const initialState = {
   books: [],
@@ -7,32 +8,20 @@ const initialState = {
 };
 
 export const getBooks = createAsyncThunk('books/get', async () => {
-  const response = await axios.get(`${process.env.REACT_APP_GET_API_KEY}`);
-  const bookItems = Object.entries(response.data).map(([id, books]) => {
-    const [item] = books;
-    return { id, ...item };
-  });
-  return bookItems;
+  const response = await fetchData();
+  return response;
 });
 
 export const postBooks = createAsyncThunk('books/post', async (requestData) => {
   await axios.post(`${process.env.REACT_APP_POST_API_KEY}`, requestData);
-  const response = await axios.get(`${process.env.REACT_APP_GET_API_KEY}`);
-  const bookItems = Object.entries(response.data).map(([id, books]) => {
-    const [item] = books;
-    return { id, ...item };
-  });
-  return bookItems;
+  const response = await fetchData();
+  return response;
 });
 
 export const deleteBooks = createAsyncThunk('books/delete', async (id) => {
   await axios.delete(`${process.env.REACT_APP_POST_API_KEY}/${id}`);
-  const response = await axios.get(`${process.env.REACT_APP_DELETE_API_KEY}`);
-  const bookItems = Object.entries(response.data).map(([id, books]) => {
-    const [item] = books;
-    return { id, ...item };
-  });
-  return bookItems;
+  const response = await fetchData();
+  return response;
 });
 
 const booksSlice = createSlice({
