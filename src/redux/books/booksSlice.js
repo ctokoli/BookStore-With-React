@@ -41,6 +41,9 @@ const booksSlice = createSlice({
       state.status = 'success';
       state.books = action.payload;
     });
+    builder.addCase(getBooks.rejected, (state) => {
+      state.status = 'failed';
+    });
 
     builder.addCase(postBooks.fulfilled, (state, action) => {
       state.status = 'success';
