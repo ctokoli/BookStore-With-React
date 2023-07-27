@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import BooksLists from './BookLists';
 
 const BookItems = ({ bookProps }) => (
-  <div className="bookItems">
-    <ul>
+  <ul className="bookItems">
+    <li>
       <BooksLists
         key={bookProps.id}
         bookItem={bookProps}
       />
-    </ul>
-  </div>
+    </li>
+  </ul>
 );
 
 BookItems.propTypes = {
