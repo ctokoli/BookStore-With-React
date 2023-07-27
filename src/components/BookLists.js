@@ -8,11 +8,11 @@ const BooksList = ({ bookItem }) => {
     dispatch(deleteBooks(id));
   };
   return (
-    <li>
+    <>
       <h1>{bookItem.title}</h1>
       <h3>{bookItem.author}</h3>
       <button type="button" onClick={() => removeBook(bookItem.id)}>Delete</button>
-    </li>
+    </>
   );
 };
 
