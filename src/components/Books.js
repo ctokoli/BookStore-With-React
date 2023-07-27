@@ -13,7 +13,7 @@ const Books = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="container">
       {books.map((book) => (
         <BooksItem
           key={book.id}
@@ -21,7 +21,7 @@ const Books = () => {
         />
       ))}
       <BookForm />
-    </>
+    </div>
   );
 };
 
