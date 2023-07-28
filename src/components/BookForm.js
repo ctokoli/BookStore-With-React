@@ -22,6 +22,7 @@ const BookForm = () => {
 
   return (
     <>
+      <div className="horizontal-divider"> </div>
       <h2 className="form-title">ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit} className="add-form">
         <input
