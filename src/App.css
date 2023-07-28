@@ -24,6 +24,7 @@ nav {
   padding: 3%;
   display: flex;
   align-items: center;
+  box-shadow: 0px 3px 20px 0px #b1b1b16e;
 }
 
 .menu li {
@@ -38,11 +39,11 @@ nav {
 
 .bookItems {
   background-color: #fff;
-  padding-left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: 1px solid #e8e8e8;
+  padding: 1rem;
 }
 
 .book-content {
@@ -57,6 +58,15 @@ h2, h4, h6 {
   list-style: none;
 }
 
+.link a {
+  opacity: .50;
+ color: #000;
+}
+
+a.active-link {
+  color: #0290ff;
+}
+
 button{
   background: none;
   border: none;
@@ -67,6 +77,174 @@ button{
   padding: 4%;
   box-shadow: 0px 20px 60px 0px #b9b9b94d;
   margin-top: -15px;
+}
+
+.center {
+  opacity: .30;
+  text-align: center;
+}
+
+.center h1, h3 {
+  margin: 0;
+}
+
+.progress-continer {
+  display: flex;
+  align-items: center;
+}
+
+.circular-progress-container {
+  width: 5.625rem;
+  height: 5.625rem;
+  padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular-progress {
+  position: absolute;
+  border-radius: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #307bbe;
+  border-left-color: #e8e8e8;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.percent-complete {
+  font-size: 2rem;
+}
+
+.completed {
+  font-size: .875rem;
+  opacity: .5;
+}
+
+.progress-stat p {
+  margin: 0;
+}
+
+.progress-divider {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 0 3.688rem 0 4.938rem;
+  background-color: #e8e8e8;
+}
+
+.current-chapter-container {
+  display: flex;
+  flex-direction: column;
+  width: 14rem;
+}
+
+.current-chapter,
+.current-chapter-label {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: #121212;
+}
+
+.current-chapter {
+  margin-top: 0.438rem;
+  font-size: 1rem;
+  letter-spacing: -.4px;
+}
+
+.primary-button {
+  cursor: pointer;
+  border: none;
+  background-color: #0290ff;
+  border-radius: 3px;
+  padding: 8px 24px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  letter-spacing: .5px;
+  color: #fff;
+}
+
+.book-content h4 {
+  opacity: .50;
+}
+
+.book-content h2 {
+  margin: 5px 0;
+}
+
+.book-content h6 {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 1.313rem;
+}
+
+.button-outline {
+  font-family: "Roboto Slab", serif;
+  background-color: transparent;
+  border: none;
+  color: #78bcf5;
+  font-size: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.vertical-divider {
+  width: 0.125rem;
+  height: 1.5rem;
+  background-color: #e8e8e8;
+  margin: 0 1rem;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -.18px;
+  color: #888;
+}
+
+.add-form {
+  margin-top: 20px;
+  display: flex;
+  grid-gap: 32px;
+  gap: 32px;
+}
+
+.title-input {
+  width: 25%;
+}
+
+.input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: -.15px;
+  color: #121212;
+}
+
+.primary-button-big {
+  cursor: pointer;
+  width: 20%;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  letter-spacing: .5px;
+  color: #fff;
+  font-size: .813rem;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+}
+
+select.input.title-input {
+  color: #727272;
 }
 
 
