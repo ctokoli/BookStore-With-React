@@ -21,30 +21,36 @@ const BookForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="input"
-        placeholder="Add book"
-        value={formValue.title}
-        name="title"
-        onChange={handleInput}
-      />
-      <input
-        type="input"
-        placeholder="Add Author"
-        value={formValue.author}
-        name="author"
-        onChange={handleInput}
-      />
-      <input
-        type="input"
-        placeholder="Add Category"
-        value={formValue.category}
-        name="category"
-        onChange={handleInput}
-      />
-      <button type="submit">Add a Book</button>
-    </form>
+    <>
+      <div className="horizontal-divider"> </div>
+      <h2 className="form-title">ADD NEW BOOK</h2>
+      <form onSubmit={handleSubmit} className="add-form">
+        <input
+          className="input title-input"
+          type="input"
+          placeholder="Add Book title"
+          value={formValue.title}
+          name="title"
+          onChange={handleInput}
+        />
+        <input
+          className="input title-input"
+          type="input"
+          placeholder="Add Book Author"
+          value={formValue.author}
+          name="author"
+          onChange={handleInput}
+        />
+        <select className="input title-input" name="category" value={formValue.category} onChange={handleInput}>
+          <option value="Select Category">Select Category</option>
+          <option value="Action">Action</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Economy">Economy</option>
+          <option value="Novel">Novel</option>
+        </select>
+        <button className="primary-button-big" type="submit">ADD BOOK</button>
+      </form>
+    </>
   );
 };
 

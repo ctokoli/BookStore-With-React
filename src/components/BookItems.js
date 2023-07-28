@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types';
 import BooksLists from './BookLists';
+import Progress from './Progress';
 
 const BookItems = ({ bookProps }) => (
-  <div className="bookItems">
-    <ul>
+  <ul className="bookItems">
+    <li>
       <BooksLists
         key={bookProps.id}
         bookItem={bookProps}
       />
-    </ul>
-  </div>
+    </li>
+    <Progress />
+  </ul>
 );
 
 BookItems.propTypes = {
