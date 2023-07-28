@@ -1,12 +1,12 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
 
 const NavLayout = () => (
   <>
     <nav>
       <ul className="menu">
-        <li className="logo"><Link to="/">Bookstore CMS</Link></li>
-        <li><Link to="/">BOOKS</Link></li>
-        <li><Link to="/categories">CATEGORIES</Link></li>
+        <li className="logo"><NavLink to="/">Bookstore CMS</NavLink></li>
+        <li className="link"><NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : '')}>BOOKS</NavLink></li>
+        <li className="link"><NavLink className={({ isActive }) => (isActive ? 'active-link' : '')} to="/categories">CATEGORIES</NavLink></li>
       </ul>
     </nav>
     <Outlet />
