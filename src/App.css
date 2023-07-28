@@ -159,8 +159,8 @@ h3 {
   width: 14rem;
 }
 
-.current-chapter,
 .current-chapter-label {
+  opacity: .50;
   font-weight: 400;
   color: #121212;
 }
