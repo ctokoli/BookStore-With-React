@@ -9,6 +9,7 @@ const BookItems = ({ bookProps }) => (
         bookItem={bookProps}
       />
     </li>
+    <li><h1>Progress Container</h1></li>
   </ul>
 );
 
