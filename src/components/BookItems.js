@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import BooksLists from './BookLists';
+import Progress from './Progress';
 
 const BookItems = ({ bookProps }) => (
   <ul className="bookItems">
@@ -9,7 +10,7 @@ const BookItems = ({ bookProps }) => (
         bookItem={bookProps}
       />
     </li>
-    <li><h1>Progress Container</h1></li>
+    <Progress />
   </ul>
 );
 
